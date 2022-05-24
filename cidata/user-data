@@ -1,0 +1,25 @@
+#cloud-config
+autoinstall:
+  version: 1
+#  refresh-installer:
+#  update: yes
+#  interactive-sections:
+#    - network
+#    - storage
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
+  identity:
+    hostname: citest1
+    password: $6$RF6EEgQ4k4eO5lK2$hzZM9g9ytcXFPkPBEOS2pgFlN3EJyTl8JD1u.Hiu1pfneUzX3QSU6kFKrOWxZ9CqYuW6U6H9RphXoJBk4CZVR/
+    username: kinghorn
+  ssh:
+    allow-pw: true
+    install-server: true
+  apt:
+  primary:
+    - arches: [default]
+      uri: http://us.archive.ubuntu.com/ubuntu/
+  #packages:
+  #  - ubuntu-desktop-minimal^
+    
